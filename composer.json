@@ -1,0 +1,15 @@
+{
+    "name": "Log Analyzer",
+    "description": "Aplikacja testowa do analizy logów",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Łukasz Handy"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}

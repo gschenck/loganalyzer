@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="app2.svg"
+   id="svg4"
+   viewBox="0 0 32 32"
+   version="1"
+   width="32"
+   height="32">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8">
+    <rect
+       x="-7.2867953"
+       y="-8.8208575"
+       width="65.197642"
+       height="54.459207"
+       id="rect32" />
+    <rect
+       id="rect106"
+       height="93.386035"
+       width="117.93103"
+       y="-24.544995"
+       x="-44.679561" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:current-layer="svg4"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="24.065648"
+     inkscape:cx="13.474578"
+     inkscape:zoom="20.85965"
+     showgrid="false"
+     id="namedview6"
+     inkscape:window-height="1027"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <text
+     style="fill:#e9afaf;fill-opacity:1;line-height:1.25;stroke:none;font-family:'Bauhaus 93';font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect106);-inkscape-font-specification:'Bauhaus 93, ';font-stretch:normal;font-variant:normal;"
+     id="text104"
+     xml:space="preserve" />
+  <text
+     xml:space="preserve"
+     id="text30"
+     style="fill:#e9afaf;fill-opacity:1;line-height:1.25;stroke:none;font-family:'Bauhaus 93';font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect32);-inkscape-font-specification:'Bauhaus 93, ';font-stretch:normal;font-variant:normal;" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:28.0569px;line-height:0.55;font-family:sans-serif;text-align:start;text-anchor:start;fill:#e9afaf;fill-opacity:1;stroke:none;stroke-width:1.74987"
+     x="-0.066611588"
+     y="18.9025"
+     id="text38"
+     transform="scale(1.0983649,0.91044427)"><tspan
+       y="18.9025"
+       x="-0.066611588"
+       id="tspan202"
+       sodipodi:role="line"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.0569px;line-height:0.55;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93 Bold';text-align:start;text-anchor:start;fill:#ffffff;stroke-width:1.74987">L</tspan><tspan
+       sodipodi:role="line"
+       x="-0.066611588"
+       y="35.300453"
+       id="tspan40"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.0569px;line-height:0.55;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93 Bold';text-align:start;text-anchor:start;fill:#ffffff;stroke-width:1.74987">  A</tspan></text>
+</svg>
