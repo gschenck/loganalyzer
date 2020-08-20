@@ -44,6 +44,7 @@ date_default_timezone_set("Europe/Warsaw");
 
   <hr>
   <input type="submit" value="Pokaż">
+  <button type="submit" name="print" value="1" <?php if(!($_POST['date1']&&$_POST['date2'])) echo " disabled "; ?> >Drukuj</button>
 </form>
 
 

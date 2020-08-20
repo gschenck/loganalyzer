@@ -23,11 +23,11 @@ class DBController extends Controller {
     $querybuilder = $this->connection->getQueryBuilder();
     if($this->getAdminStatus($this->userId))
     {
-      $querybuilder->select('user')->from('activity')->groupBy('user');//->where("uid Like ".'"'.$uid.'"');
+      $querybuilder->select('user')->from('activity')->groupBy('user');
     }
     else
     {
-      $querybuilder->select('user')->from('activity')->groupBy('user')->where("user Like ".'"'.$this->userId.'"');
+      $querybuilder->select('user')->from('activity')->groupBy('user')->where("user Like ?")->setParameter(0,$this->userId);
     }
     $res =  $querybuilder->execute();
     foreach ($res as $row) {
@@ -73,34 +73,36 @@ class DBController extends Controller {
         $data[]=NULL; 
         $path[]=NULL;                                  
      
-      if($this->getAdminStatus($uid))
-      {
-        if(!$user || $user=='selected')
-          $user ='%';
-        if(!$category || $category=='selected')
-          $category ='%';
-        $querybuilder = $this->connection->getQueryBuilder();
-        $querybuilder->select('*')->from('activity')
-                                  ->where("user Like ".'"'.$user.'"')
-                                  ->orwhere("affecteduser Like ".'"'.$user.'"')
-                                  ->orwhere("subjectparams Like ".'"%'.$user.'%"')
-                                  ->andwhere('timestamp >= UNIX_TIMESTAMP("'.$date1.'")')
-                                  ->andwhere('timestamp <= UNIX_TIMESTAMP("'.$date2.'")')
-                                  ->andwhere("type Like ".'"'.$category.'"');
-      }
-      else
-      {
-        if(!$category || $category=='selected')
-          $category ='%';
-        $querybuilder = $this->connection->getQueryBuilder();
-        $querybuilder->select('*')->from('activity')
-                                  ->where("user Like ".'"'.$uid.'"')
-                                  ->orwhere("affecteduser Like ".'"'.$uid.'"')
-                                  ->orwhere("subjectparams Like ".'"%'.$uid.'%"')
-                                  ->andwhere('timestamp >= UNIX_TIMESTAMP("'.$date1.'")')
-                                  ->andwhere('timestamp <= UNIX_TIMESTAMP("'.$date2.'")')
-                                  ->andwhere("type Like ".'"'.$category.'"');
-      }
+        if($this->getAdminStatus($uid))
+        {
+          if(!$user || $user=='selected')
+            $user ='%';
+          if(!$category || $category=='selected')
+            $category ='%';
+          $querybuilder = $this->connection->getQueryBuilder();
+          $querybuilder->select('*')->from('activity')
+                                    ->where("user Like :user")
+                                    ->orwhere("affecteduser Like :usera")
+                                    ->orwhere("subjectparams Like :users")
+                                    ->andwhere('timestamp >= UNIX_TIMESTAMP(:date1)')
+                                    ->andwhere('timestamp <= UNIX_TIMESTAMP(:date2)')
+                                    ->andwhere("type Like :category")
+                                    ->setParameters(array('user' => $user,'usera' => $user,'users' => "%'.$user.'%",'date1' => $date1,'date2' => $date2,'category' => $category));
+        }
+        else
+        {
+          if(!$category || $category=='selected')
+            $category ='%';
+          $querybuilder = $this->connection->getQueryBuilder();
+          $querybuilder->select('*')->from('activity')
+                                    ->where("user Like :user")
+                                    ->orwhere("affecteduser Like :usera")
+                                    ->orwhere("subjectparams Like :users")
+                                    ->andwhere('timestamp >= UNIX_TIMESTAMP(:date1)')
+                                    ->andwhere('timestamp <= UNIX_TIMESTAMP(:date2)')
+                                    ->andwhere("type Like :category")
+                                    ->setParameters(array('user' => $uid, 'usera' => $uid,'users' => "%'.$uid.'%",'date1' => $date1,'date2' => $date2,'category' => $category));
+        }
       
       $res =  $querybuilder->execute();
       foreach ($res as $row) {
@@ -140,7 +142,7 @@ class DBController extends Controller {
       if($uid)
       {
             $querybuilder = $this->connection->getQueryBuilder();
-            $querybuilder->select('*')->from('group_user')->where("uid Like ".'"'.$uid.'"');
+            $querybuilder->select('*')->from('group_user')->where("uid Like ?")->setParameter(0,$uid);
             $res =  $querybuilder->execute();
             if($res->fetch()['gid'])
                 return true;
@@ -295,7 +297,7 @@ class DBController extends Controller {
           return 'Cofnięto udostępnienie linku przez siebie';
           break;
         case 'created_by':
-          return 'Utworzono obiek przez';
+          return 'Utworzono obiekt przez';
           break;
         case 'deleted_by':
           return 'Usunięto obiekt przez';
@@ -406,7 +408,7 @@ class DBController extends Controller {
           return 'Katalog udsotępniony emailem został pobrany';
           break;
         default:
-          return 'Brak kategorii';
+          return 'Brak wyników. Zmień kryteria wyszukiwania i spróbuj ponownie.';
         break;
       }
      }

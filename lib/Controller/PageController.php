@@ -53,8 +53,16 @@ class PageController extends Controller {
 		$_POST['date1'] = $_POST['date2'];
 	$res[0]=$this->db->getUserList();
 	$res[1]=$this->db->category();
-    $res[2]=$this->db->getLogData($this->userId, $_POST['date1'], $_POST['date2'], $_POST['users'], $_POST['category']);
-	$res[2]=$this->db->formatLogs($res[2]);
+    //$res[2]=$this->db->getLogData($this->userId, $_POST['date1'], $_POST['date2'], $_POST['users'], $_POST['category']);
+	//$res[2]=$this->db->formatLogs($res[2]);
+
+	$res[2]=$this->db->formatLogs($this->db->getLogData($this->userId, $_POST['date1'], $_POST['date2'], $_POST['users'], $_POST['category']));
+
+	if($_POST['print'])
+	{
+		return new TemplateResponse('loganalyzer', 'print', $res);
+	}
+
 	return new TemplateResponse('loganalyzer', 'index', $res);
 	}
 
