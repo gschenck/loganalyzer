@@ -3,16 +3,16 @@
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>loganalyzer</id>
     <name>Log Analyzer</name>
-    <summary>Aplikacja testowa do analizy logów</summary>
-    <description><![CDATA[Aplikacja będzie analizować tabelę z aktywnością użytkowników i generować raport z w/w aktywnościami jako wydruk]]></description>
-    <version>0.0.1</version>
+    <summary>Aplikacja analuzująca tablę z aktywnościami użytkowników</summary>
+    <description><![CDATA[Aplikacja generuje raport aktywności użytkowników w formie wydruku.]]></description>
+    <version>0.0.2</version>
     <licence>agpl</licence>
-    <author mail="lukasz.handy@gmail.com" >Łukasz Handy</author>
+    <author>Łukasz Handy</author>
     <namespace>LogAnalyzer</namespace>
     <category>tools</category>
-    <bugs>https://github.com/lukaszhandy/nextcloudApp</bugs>
+    <bugs>https://github.com/lukaszhandy/loganalyzer</bugs>
     <dependencies>
-        <nextcloud min-version="15" max-version="15"/>
+        <nextcloud min-version="15" max-version="20"/>
     </dependencies>
     <navigations>
         <navigation>

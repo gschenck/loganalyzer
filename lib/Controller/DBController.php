@@ -198,7 +198,7 @@ class DBController extends Controller {
 
       foreach($sciezka as $key => $kategoria)
       {
-        $wynik.=$kategoria.'<br>';
+        $wynik.=$kategoria.'<br><br>';
       }
       $wynik=substr($wynik,0,strlen($wynik)-4);
       return $wynik;

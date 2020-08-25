@@ -6,28 +6,40 @@ html {
   -webkit-text-size-adjust: 100%; }
 body {
 	font-family: "Lucida Sans",sans-serif;
-  	font-size: 11px;
+  	font-size: 10px;
   	line-height: 1.1;
   	color: #000000;
-  	background-color: #000000;}
+    background-color: #000000;}
+div {
+      font-family: "Lucida Sans",sans-serif;
+        font-size: 10px;
+        line-height: 1.1;
+        color: #000000;
+        background-color: #000000;}
 img {
-  vertical-align: middle; }
+  vertical-align: middle;
+  visibility: hidden !important; 
+ }
 
 table {
-  background-color: transparent; }
- 
-table {
+  background-color: transparent;
   border-collapse: collapse;
-  border-spacing: 0; }
-  
+  border-spacing: 20;
+  font-size: 10pt;
+
+}
 table.pagebreakbefore{
 	page-break-after: always !important;
 	page-break-inside: avoid !important;
 }
-
+tr {
+  page-break-inside: avoid !important;
+}
 td {
 	padding: 0;	
-	line-height: 1.0;
+  line-height: 1 !important;
+  page-break-inside: avoid !important;
+  white-space: normal;
 }
 th {
   padding: 0; }
@@ -311,9 +323,9 @@ label {
   a:visited {
     text-decoration: underline; }
   a[href]:after {
-    content: " (" attr(href) ")"; }
+    content: ""; }
   abbr[title]:after {
-    content: " (" attr(title) ")"; }
+    content: " ")"; }
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
@@ -324,10 +336,7 @@ label {
   thead {
     display: table-header-group; }
   tr,
-  img {
-    page-break-inside: avoid; }
-  img {
-    max-width: 100% !important; }
+  
   p,
   h2,
   h3 {
