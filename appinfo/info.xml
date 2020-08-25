@@ -5,7 +5,7 @@
     <name>Log Analyzer</name>
     <summary>Aplikacja analuzująca tablę z aktywnościami użytkowników</summary>
     <description><![CDATA[Aplikacja generuje raport aktywności użytkowników w formie wydruku.]]></description>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <licence>agpl</licence>
     <author>Łukasz Handy</author>
     <namespace>LogAnalyzer</namespace>
